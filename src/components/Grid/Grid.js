@@ -1,6 +1,8 @@
-import React from "react";
+import React, { createContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+
+export const GridContext = createContext();
 
 export const Grid = ({ children, cols, rows }) => {
   let gridColumns = `[col1-start] 1fr `;
@@ -21,10 +23,14 @@ export const Grid = ({ children, cols, rows }) => {
     grid-template-rows: ${gridRows};
   `;
 
-  return <GridContainer>{children}</GridContainer>;
+  return (
+    <GridContext.Provider value={{ gridColumns: cols, gridRows: rows }}>
+      <GridContainer>{children}</GridContainer>
+    </GridContext.Provider>
+  );
 };
 
 Grid.propTypes = {
-  cols: PropTypes.number,
-  rows: PropTypes.number
-}
+  cols: PropTypes.number.isRequired,
+  rows: PropTypes.number.isRequired
+};

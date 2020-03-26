@@ -49,7 +49,8 @@ export const Cell = ({
   const Wrapper = styled.div`
     grid-column: ${gridColumn};
     grid-row: ${gridRow};
-    ${justifySelf ? `justify-self: ${justifySelf}` : ""}
+    ${justifySelf ? `justify-self: ${justifySelf};` : ""}
+    border: 2px dotted red;
   `;
 
   return <Wrapper>{children}</Wrapper>;

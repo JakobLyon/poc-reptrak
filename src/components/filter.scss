@@ -1,0 +1,32 @@
+@import "../../node_modules/font-awesome/css/font-awesome.css";
+
+
+
+.filterButton {
+  position: absolute;
+  right: 0px;
+  top: 30%;
+  height: 50px;
+  width: 30px;
+  background-color: red;
+  padding: 0;
+  border: none;
+  z-index: 1;
+
+  &__icon {
+    position: absolute;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.filterContent {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  border: 5px solid black;
+}

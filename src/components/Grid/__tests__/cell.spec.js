@@ -1,3 +1,3 @@
 describe("Grid Cell Tests", () => {
-  it("tests are dumb")
-})
+  it("tests are dumb", () => {});
+});

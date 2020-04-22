@@ -1,0 +1,16 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: [col1-start] 1fr [col2-start] auto [col2-end];
+  height: 100%;
+  width: 100%;
+
+  &__content{
+    grid-column: col1-start;
+    border: 2px dotted blue;
+  }
+
+  &__sidebar {
+    grid-column: col2-start;
+    border: 2px dotted blue;
+  }
+}

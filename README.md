@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+To begin working on this project, follow these steps.
+
+1. install node
+2. From inside the project directory, run `npm install` - this will install all dependencies
+3. From inside the project directory, run `npm start` - this will start the project, opening your web browser
+4. From inside the project directory, run `./node_modules/eslint/bin/eslint.js --init` to install/setup eslint. Doing so will change .eslintrc.js, be sure to check out that file afterwards.
+
 ## Available Scripts
 
 In the project directory, you can run:

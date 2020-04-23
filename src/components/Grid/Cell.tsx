@@ -1,24 +1,24 @@
-import React, { useContext } from "react";
-import styled from "styled-components";
-import { GridContext } from "./Grid";
+import { GridContext } from './Grid';
+import React, { useContext } from 'react';
+import styled from 'styled-components';
 
 export const justifySelfOptions = {
-  start: "start",
-  end: "end",
-  center: "center",
-  stretch: "stretch"
-}
+  start: 'start',
+  end: 'end',
+  center: 'center',
+  stretch: 'stretch',
+};
 
 export const stretchOptions = {
-  end: "end"
-}
+  end: 'end',
+};
 
 type CellProps = {
   colStart: string | number;
-  colEnd?: string | number | "end";
+  colEnd?: string | number | 'end';
   rowStart: string | number;
-  rowEnd?: string | number | "end";
-  justifySelf: "start" | "end" | "center" | "stretch";
+  rowEnd?: string | number | 'end';
+  justifySelf: 'start' | 'end' | 'center' | 'stretch';
   children: Node;
 };
 
@@ -28,7 +28,7 @@ export const Cell = ({
   rowStart,
   rowEnd,
   justifySelf,
-  children
+  children,
 }: CellProps) => {
   const { gridColumns, gridRows } = useContext(GridContext);
 
@@ -43,13 +43,13 @@ export const Cell = ({
   if (rowEnd === stretchOptions.end) {
     gridRow = `${gridRow} / row${gridRows}-end`;
   } else if (rowEnd) {
-    gridRow = `${rowEnd ? ` / row${rowEnd}-start` : ""}`;
+    gridRow = `${rowEnd ? ` / row${rowEnd}-start` : ''}`;
   }
 
   const Wrapper = styled.div`
     grid-column: ${gridColumn};
     grid-row: ${gridRow};
-    ${justifySelf ? `justify-self: ${justifySelf};` : ""}
+    ${justifySelf ? `justify-self: ${justifySelf};` : ''}
     border: 2px dotted red;
   `;
 

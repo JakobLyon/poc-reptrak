@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./filterSidebar.scss";
+import './filterSidebar.scss';
+import React, { useState } from 'react';
 
 export const FilterSidebar = () => {
   const [filterOpen, setFilterOpen] = useState(false);
@@ -8,9 +8,9 @@ export const FilterSidebar = () => {
     <div className="filterSidebar">
       <div className="filterSidebar__buttonWrapper">
         <button
-          type="button"
           className="filterSidebar__button"
           onClick={() => setFilterOpen(!filterOpen)}
+          type="button"
         >
           <i className="fa fa-caret-left fa-3x filterSidebar__icon" />
         </button>

@@ -1,0 +1,13 @@
+@import "../../../node_modules/font-awesome/css/font-awesome.css";
+
+.repScoreChart {
+  display: flex;
+  height: 100% - 8;
+  width: 400px;
+  color: gray;
+  margin: 1rem;
+
+  &__content{
+    padding: 1rem;;
+  }
+}

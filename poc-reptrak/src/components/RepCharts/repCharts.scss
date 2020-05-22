@@ -1,0 +1,21 @@
+@import "../../../node_modules/font-awesome/css/font-awesome.css";
+
+.reputation-charts{
+  border: 2px solid black;
+  height: 550px;
+  width: auto;
+  padding: 1rem;
+}
+.repCharts {
+  display: flex;
+  align-content: space-between;;
+  height: 400px;
+  width: auto;
+  color: gray;
+  padding: auto;
+
+
+  &__content {
+    height: 100%;
+  }
+}
